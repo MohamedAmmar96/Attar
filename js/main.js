@@ -202,7 +202,7 @@ $(document).ready(function() {
         $(".features-box .feature").removeClass("owl-carousel");
         $('.features .owl-carousel').owlCarousel({
             loop: false,
-            margin: 10,
+            margin: 30,
             rtl: true,
             responsiveClass: true,
             responsive: {

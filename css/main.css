@@ -741,6 +741,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    transition:all 0.4s ease-in-out;
 }
 
 .features .feature .feature-icon {

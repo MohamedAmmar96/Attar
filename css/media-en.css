@@ -719,6 +719,9 @@
     .customers .owl-carousel .owl-nav .owl-next {
         left: -30px;
     }
+    .features .feature:hover {
+        transform: translateY(-10px);
+    }
     .side-menu {
         display: none;
     }
@@ -728,6 +731,9 @@
 /*********************  Large Screens *********************/
 
 @media (min-width:1200px) {
+    .features .feature:hover {
+        transform: translateY(-10px);
+    }
     .side-menu {
         display: none;
     }
