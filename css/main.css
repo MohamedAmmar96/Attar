@@ -420,6 +420,7 @@ body {
     border-radius: 50%;
     outline: 0px;
     border: none;
+    background-color: transparent;
     box-shadow: none;
 }
 
