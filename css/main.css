@@ -91,22 +91,44 @@ body {
 
 .page-language .lang .lang-list {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 25px;
+    left: -35px;
     z-index: 99999;
     display: none;
+    width: 140px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
     box-shadow: 3px 3px 5px #0000001c, -3px -3px 5px #0000001c;
 }
 
-.page-language .lang .lang-list li {
-    width: 70px;
-    padding: 7px 10px;
-    text-align: center;
-    background-color: #fff;
+.page-language .lang .lang-list .lang-box {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     transition: all 0.4s ease-in-out;
 }
 
-.page-language .lang .lang-list li a {
+.page-language .lang .lang-list .lang-box .lang-content {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #785226;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.page-language .lang .lang-list .lang-box a {
     color: #785226;
     font-family: "medium";
     font-size: 14px;
@@ -114,11 +136,11 @@ body {
     transition: all 0.4s ease-in-out;
 }
 
-.page-language .lang .lang-list li:hover {
+.page-language .lang .lang-list .lang-box .lang-content:hover {
     background-color: #785226;
 }
 
-.page-language .lang .lang-list li:hover a {
+.page-language .lang .lang-list .lang-box .lang-content:hover a {
     color: #fff;
 }
 
@@ -221,9 +243,12 @@ body {
     color: #6d8839;
 }
 
-.nav .user-terms .config-link,
-.nav .user-terms .search-link {
+.nav .user-terms .config-link {
     margin-left: 20px;
+}
+
+.nav .user-terms .shopping-link {
+    margin-right: 20px;
 }
 
 .nav .user-terms .config-link .config-icon,
@@ -320,84 +345,70 @@ body {
     font-family: 'Linearicons-Free';
 }
 
-.nav .user-terms .search .search-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 50%;
-    border-radius: 35px;
-    transform: translate(-50%, -50%);
-    display: none;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 99999;
-    box-shadow: 3px 3px 5px #0000001c, -3px -3px 5px #0000001c;
-    transition: all 0.4s ease-in-out;
-}
-
-.nav .user-terms .search .search-box .search-close {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    width: 40px;
-    height: 40px;
+.style {
+    border: 1px solid #785226;
     border-radius: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border: none;
-    outline: none;
-    font-size: 30px;
-    opacity: 1;
-    color: #785226;
+    width: 30px;
+    height: 30px;
+    margin-top: -3px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.nav .user-terms .search .search-box .search-bar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 30%);
-    transform: translate(-50%, -50%);
+.nav .user-terms .search {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav .user-terms .search .box {
+    display: none;
+}
+
+.nav .user-terms .search-bar {
+    position: relative;
+    z-index: 99999;
+    top: -5px;
+    width: 250px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-right: 5px;
 }
 
-.nav .user-terms .search .search-box .search-bar input {
+.nav .user-terms .search-bar input {
     width: 100%;
-    height: 60px;
+    height: 35px;
     outline: 0;
     border: 1px solid #ddd;
     border-radius: 35px;
     padding-right: 20px;
     font-family: "medium";
-    font-size: 18px;
+    font-size: 16px;
     color: #785226;
     transition: all 0.4s ease-in-out;
 }
 
-.nav .user-terms .search .search-box .search-bar input::placeholder {
+.nav .user-terms .search-bar input::placeholder {
     font-family: "medium";
-    font-size: 16px;
+    font-size: 12px;
     color: #785226;
 }
 
-.nav .user-terms .search .search-box .search-bar button {
+.nav .user-terms .search-bar button {
     position: absolute;
-    top: 17px;
-    left: 15px;
+    top: 8px;
+    left: 10px;
     outline: none;
     border: none;
     background-color: transparent;
-    font-size: 22px;
+    font-size: 16px;
     color: #785226;
     transition: all 0.4s ease-in-out;
 }
 
-.nav .user-terms .search .search-box .search-bar:hover input {
+.nav .user-terms .search-bar:hover input {
     border: 1px solid #785226;
 }
 
@@ -980,6 +991,18 @@ body {
     display: none;
     z-index: 9999;
     background-color: transparent;
+}
+
+.overlay-box3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 

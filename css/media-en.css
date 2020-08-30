@@ -12,11 +12,13 @@
         margin-top: 25px;
     }
     .nav .user-terms .menu-button,
-    .nav .user-terms .config,
-    .nav .user-terms .search {
+    .nav .user-terms .config {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .nav .user-terms .menu-button {
+        margin-top: 5px;
     }
     .nav .user-terms .shopping {
         justify-content: flex-start;
@@ -26,9 +28,11 @@
         bottom: -5px;
     }
     .nav .user-terms .menu-button .menu-link,
-    .nav .user-terms .config .config-link,
-    .nav .user-terms .search .search-link {
+    .nav .user-terms .config .config-link {
         margin-right: 15px;
+    }
+    .nav .user-terms .shopping .shopping-link {
+        margin-left: 15px;
     }
     .nav .user-terms .menu-button .menu-link,
     .nav .user-terms .config .config-link .config-icon,
@@ -244,36 +248,11 @@
     }
     /***** Start Config Box *****/
     .nav .user-terms .config .config-box {
-        width: 100px;
-        height: 200px;
-        left: -40px;
-    }
-    .nav .user-terms .config .config-box .sign-box {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .nav .user-terms .config .config-box .sign-box .sign {
-        margin-bottom: 20px;
-    }
-    .nav .user-terms .config .config-box .sign-box .sign:last-child {
-        margin-bottom: 0;
+        left: -90px;
     }
     /***** Start Search Box *****/
-    .nav .user-terms .search .search-box {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translate(0, 0);
-        border-radius: 0;
-    }
-    .nav .user-terms .search .search-box .search-close {
-        top: 25%;
-    }
-    .nav .user-terms .search .search-box .search-bar {
-        width: calc(100% - 15%);
+    .nav .user-terms .search-bar {
+        width: 220px;
     }
     /***** Start Side Menu *****/
     .side-menu {
@@ -321,16 +300,16 @@
         font-family: "medium";
         font-size: 16px;
         line-height: 1.7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .side-menu .account p::after,
     .side-menu .language p::after {
-        content: '\f0dd';
-        font-family: "Font Awesome 5 Free";
-        font-style: normal;
-        font-weight: 600;
-        text-decoration: inherit;
-        position: absolute;
-        right: 30px;
+        content: '\e874';
+        font-family: 'Linearicons-Free';
+        margin-right: 30px;
+        margin-top: 3px;
     }
     .side-menu .account ul,
     .side-menu .language ul {
@@ -414,6 +393,9 @@
     .footer .footer-top .newsletter {
         width: calc(100% - 30px);
     }
+    .nav .user-terms .search-bar {
+        width: 140px;
+    }
 }
 
 
@@ -431,8 +413,7 @@
         margin-top: 35px;
     }
     .nav .user-terms .menu-button,
-    .nav .user-terms .config,
-    .nav .user-terms .search {
+    .nav .user-terms .config {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -445,9 +426,11 @@
         bottom: -5px;
     }
     .nav .user-terms .menu-button .menu-link,
-    .nav .user-terms .config .config-link,
-    .nav .user-terms .search .search-link {
+    .nav .user-terms .config .config-link {
         margin-right: 20px;
+    }
+    .nav .user-terms .shopping .shopping-link {
+        margin-left: 20px;
     }
     .nav .user-terms .menu-button .menu-link,
     .nav .user-terms .config .config-link .config-icon,
@@ -640,36 +623,7 @@
     }
     /***** Start Config Box *****/
     .nav .user-terms .config .config-box {
-        width: 100px;
-        height: 200px;
-        left: -40px;
-    }
-    .nav .user-terms .config .config-box .sign-box {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .nav .user-terms .config .config-box .sign-box .sign {
-        margin-bottom: 20px;
-    }
-    .nav .user-terms .config .config-box .sign-box .sign:last-child {
-        margin-bottom: 0;
-    }
-    /***** Start Search Box *****/
-    .nav .user-terms .search .search-box {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translate(0, 0);
-        border-radius: 0;
-    }
-    .nav .user-terms .search .search-box .search-close {
-        top: 25%;
-    }
-    .nav .user-terms .search .search-box .search-bar {
-        width: calc(100% - 30%);
+        left: -90px;
     }
     /***** Start Side Menu *****/
     .side-menu {
@@ -717,16 +671,16 @@
         font-family: "medium";
         font-size: 16px;
         line-height: 1.7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .side-menu .account p::after,
     .side-menu .language p::after {
-        content: '\f0dd';
-        font-family: "Font Awesome 5 Free";
-        font-style: normal;
-        font-weight: 600;
-        text-decoration: inherit;
-        position: absolute;
-        right: 30px;
+        content: '\e874';
+        font-family: 'Linearicons-Free';
+        margin-right: 30px;
+        margin-top: 3px;
     }
     .side-menu .account ul,
     .side-menu .language ul {
@@ -787,8 +741,8 @@
         background-color: #fff;
         width: 100%;
     }
-    .nav .user-terms .search .search-box {
-        right: 120px;
+    .nav .user-terms .search-bar {
+        width: 200px;
     }
     .main-slider .owl-carousel .owl-dots {
         bottom: 20px;

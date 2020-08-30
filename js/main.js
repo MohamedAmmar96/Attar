@@ -90,16 +90,21 @@ $(document).ready(function() {
 
     //This is to Open Search Box in small screens
     $(".user-terms .search .search-link").click(function() {
-        if ($(window).width() <= 991) {
-            $("body").addClass("overflow")
-        }
+        $("body").addClass("overflow")
         $(".overlay-box2").fadeIn(300);
     });
 
     $(".user-terms .search .search-link").click(function() {
-        $(".search .search-link span").removeClass("open-search")
-        $(".search .search-link span").addClass("close-search")
-        $(".search-box").fadeIn(600);
+        $(".search .search-link .search-icon").removeClass("open-search")
+        $(".search .search-link .search-icon").addClass("close-search")
+        $(".config").hide();
+        $(".shopping").hide();
+        $(".search-name").hide();
+        if ($(window).width() <= 991) {
+            $(".menu-button").hide();
+        }
+        $(".search-icon").addClass("style");
+        $(".box").fadeIn(600);
     });
 
     $(".search-close,.overlay-box2").click(function() {
@@ -108,9 +113,17 @@ $(document).ready(function() {
     });
 
     $(".search-close,.overlay-box2").click(function() {
-        $(".search .search-link span").addClass("open-search")
-        $(".search .search-link span").removeClass("close-search")
-        $(".search-box").fadeOut(600);
+        $(".search .search-link .search-icon").addClass("open-search")
+        $(".search .search-link .search-icon").removeClass("close-search")
+        $(".config").show();
+        $(".shopping").show();
+        $(".search-name").show();
+        if ($(window).width() <= 991) {
+            $(".menu-button").show();
+            $(".search-name").hide();
+        }
+        $(".search-icon").removeClass("style");
+        $(".box").fadeOut(300);
     });
 
 
@@ -263,22 +276,22 @@ $(document).ready(function() {
     $(".menu-button .menu-link").click(function() {
         $("body").addClass("overflow")
         $(".side-menu").addClass("overflow");
-        $(".overlay-box").fadeIn(500);
+        $(".overlay-box3").fadeIn(500);
     });
 
     $(".menu-button .menu-link").click(function() {
         $(".side-menu").addClass("overflow");
         $(".side-menu").addClass("menu-open");
-        $(".overlay-box").fadeIn(500);
+        $(".overlay-box3").fadeIn(500);
     });
 
-    $(".close,.overlay-box").click(function() {
+    $(".close,.overlay-box3").click(function() {
         $("body").removeClass("overflow")
         $(".side-menu").removeClass("overflow");
-        $(".overlay-box").fadeOut(500);
+        $(".overlay-box3").fadeOut(500);
     });
 
-    $(".close,.overlay-box").click(function() {
+    $(".close,.overlay-box3").click(function() {
         $(".side-menu").removeClass("overflow");
         $(".side-menu").removeClass("menu-open");
         $(".back-overlay").fadeOut(500);
