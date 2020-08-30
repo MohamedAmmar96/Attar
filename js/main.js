@@ -24,14 +24,20 @@ wow.init();
 
 $(window).scroll(function() {
     if (($(this).scrollTop() >= 30) && ($(window).width() >= 992)) {
-        $(".page-language").fadeOut(300);
+        // $(".page-language").slideUp(300);
+        $(".header").css("top", "-36px");
         $(".header").css("position", "fixed");
         $(".header").css("z-index", "99999");
         $(".header").css("box-shadow", "10px 0 10px #0000001c");
-    } else if ($(window).width() <= 991) {
+    } else if (($(window).width() <= 991) && ($(this).scrollTop() >= 50)) {
+        // $(".header").css("top", "0");
+        $(".header").css("position", "fixed");
+        $(".header").css("z-index", "99999");
+        $(".header").css("box-shadow", "10px 0 10px #0000001c");
         $(".page-language").css("display", "none");
     } else {
-        $(".page-language").fadeIn(300);
+        // $(".page-language").slideDown(300);
+        $(".header").css("top", "0");
         $(".header").css("position", "relative");
         $(".header").css("box-shadow", "none");
         $(".header").css("z-index", "auto");
@@ -84,7 +90,9 @@ $(document).ready(function() {
 
     //This is to Open Search Box in small screens
     $(".user-terms .search .search-link").click(function() {
-        $("body").addClass("overflow")
+        if ($(window).width() <= 991) {
+            $("body").addClass("overflow")
+        }
         $(".overlay-box2").fadeIn(300);
     });
 

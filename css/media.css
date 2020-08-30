@@ -1,6 +1,10 @@
 /**************** Extra Small Screens From 501px to 767px ****************/
 
 @media (max-width:767px) {
+    .header {
+        background-color: #fff;
+        width: 100%;
+    }
     .page-language {
         display: none;
     }
@@ -391,6 +395,10 @@
 /*********************  Small Screens *********************/
 
 @media (min-width:768px) and (max-width:991px) {
+    .header {
+        background-color: #fff;
+        width: 100%;
+    }
     .page-language {
         display: none;
     }
@@ -736,9 +744,6 @@
         z-index: 9999;
         width: 100%;
     }
-    .header .nav .user-terms {
-        z-index: 99999;
-    }
     .nav .user-terms .search .search-box {
         left: 120px;
     }
@@ -771,9 +776,6 @@
     .header {
         background-color: #fff;
         width: 100%;
-    }
-    .header .nav .user-terms {
-        z-index: 99999;
     }
     .features .feature:hover {
         transform: translateY(-10px);
