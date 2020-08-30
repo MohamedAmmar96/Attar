@@ -22,6 +22,23 @@ var wow = new WOW({
 });
 wow.init();
 
+$(window).scroll(function() {
+    if (($(this).scrollTop() >= 30) && ($(window).width() >= 992)) {
+        $(".page-language").fadeOut(300);
+        $(".header").css("position", "fixed");
+        $(".header").css("z-index", "99999");
+        $(".header").css("box-shadow", "10px 0 10px #0000001c");
+    } else if ($(window).width() <= 991) {
+        $(".page-language").css("display", "none");
+    } else {
+        $(".page-language").fadeIn(300);
+        $(".header").css("position", "relative");
+        $(".header").css("box-shadow", "none");
+        $(".header").css("z-index", "auto");
+    }
+});
+
+
 $(document).ready(function() {
 
     // This is to Open Language menu in large Screens
@@ -51,7 +68,7 @@ $(document).ready(function() {
     });
 
     $(".user-terms .config .config-link").click(function() {
-        $(".config .config-list").slideDown(300);
+        $(".config .config-box").slideDown(300);
     });
 
     $(".overlay-box").click(function() {
@@ -61,29 +78,31 @@ $(document).ready(function() {
     $(".overlay-box").click(function() {
         $(".config .config-link span").addClass("open-config")
         $(".config .config-link span").removeClass("close-config")
-        $(".config .config-list").slideUp(300);
+        $(".config .config-box").slideUp(300);
     });
 
 
     //This is to Open Search Box in small screens
     $(".user-terms .search .search-link").click(function() {
+        $("body").addClass("overflow")
         $(".overlay-box2").fadeIn(300);
     });
 
     $(".user-terms .search .search-link").click(function() {
         $(".search .search-link span").removeClass("open-search")
         $(".search .search-link span").addClass("close-search")
-        $(".search-box").slideDown(300);
+        $(".search-box").fadeIn(600);
     });
 
-    $(".overlay-box2").click(function() {
+    $(".search-close,.overlay-box2").click(function() {
+        $("body").removeClass("overflow")
         $(".overlay-box2").fadeOut(300);
     });
 
-    $(".overlay-box2").click(function() {
+    $(".search-close,.overlay-box2").click(function() {
         $(".search .search-link span").addClass("open-search")
         $(".search .search-link span").removeClass("close-search")
-        $(".search-box").slideUp(300);
+        $(".search-box").fadeOut(600);
     });
 
 

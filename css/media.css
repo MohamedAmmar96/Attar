@@ -4,13 +4,8 @@
     .page-language {
         display: none;
     }
-    .nav .logo img {
-        margin-left: auto;
-        margin-right: auto;
-    }
     .nav .user-terms {
-        justify-content: center;
-        margin-top: 15px;
+        margin-top: 25px;
     }
     .nav .user-terms .menu-button,
     .nav .user-terms .config,
@@ -46,13 +41,6 @@
     .nav .user-terms .search-link .search-name,
     .nav .user-terms .shopping-link .shopping-name {
         display: none;
-    }
-    .nav .user-terms .config .config-list {
-        right: -45px;
-    }
-    .nav .user-terms .search .search-box {
-        width: 400px;
-        left: 100%;
     }
     .main-slider .owl-carousel .owl-dots {
         bottom: 10px;
@@ -102,6 +90,20 @@
     .customers {
         margin-top: 30px;
         margin-bottom: 50px;
+    }
+    .item {
+        flex-direction: column;
+    }
+    .item .customer-img {
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .item .content {
+        text-align: center;
+    }
+    .item .content .stars {
+        justify-content: center;
     }
     .customers .customers-title {
         margin-bottom: 15px;
@@ -170,11 +172,8 @@
     .footer .footer-top .two h3::after,
     .footer .footer-top .three h3::after,
     .footer .footer-top .four h3::after {
-        content: '\f0dd';
-        font-family: "Font Awesome 5 Free";
-        font-style: normal;
-        font-weight: 600;
-        text-decoration: inherit;
+        content: '\e874';
+        font-family: 'Linearicons-Free';
         position: absolute;
         left: 65px;
     }
@@ -213,6 +212,39 @@
     }
     .footer .footer-bottom .footer-logos .payment {
         margin-bottom: 10px;
+    }
+    /***** Start Config Box *****/
+    .nav .user-terms .config .config-box {
+        width: 100px;
+        height: 200px;
+        right: -40px;
+    }
+    .nav .user-terms .config .config-box .sign-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav .user-terms .config .config-box .sign-box .sign {
+        margin-bottom: 20px;
+    }
+    .nav .user-terms .config .config-box .sign-box .sign:last-child {
+        margin-bottom: 0;
+    }
+    /***** Start Search Box *****/
+    .nav .user-terms .search .search-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+    .nav .user-terms .search .search-box .search-close {
+        top: 25%;
+    }
+    .nav .user-terms .search .search-box .search-bar {
+        width: calc(100% - 15%);
     }
     /***** Start Side Menu *****/
     .side-menu {
@@ -326,10 +358,6 @@
 /**************** Extra Small Screens From 0 to 500px ****************/
 
 @media (max-width:500px) {
-    .nav .user-terms .search .search-box {
-        width: 320px;
-        left: 100%;
-    }
     .main-slider .owl-carousel .owl-dots {
         bottom: 0px;
     }
@@ -403,13 +431,6 @@
     .nav .user-terms .search-link .search-name,
     .nav .user-terms .shopping-link .shopping-name {
         display: none;
-    }
-    .nav .user-terms .config .config-list {
-        right: -45px;
-    }
-    .nav .user-terms .search .search-box {
-        width: 400px;
-        left: 160px
     }
     .main-slider .owl-carousel .owl-dots {
         bottom: 10px;
@@ -524,11 +545,8 @@
     .footer .footer-top .two h3::after,
     .footer .footer-top .three h3::after,
     .footer .footer-top .four h3::after {
-        content: '\f0dd';
-        font-family: "Font Awesome 5 Free";
-        font-style: normal;
-        font-weight: 600;
-        text-decoration: inherit;
+        content: '\e874';
+        font-family: 'Linearicons-Free';
         position: absolute;
         left: 65px;
     }
@@ -567,6 +585,39 @@
     }
     .footer .footer-bottom .footer-logos .payment {
         margin-bottom: 10px;
+    }
+    /***** Start Config Box *****/
+    .nav .user-terms .config .config-box {
+        width: 100px;
+        height: 200px;
+        right: -40px;
+    }
+    .nav .user-terms .config .config-box .sign-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav .user-terms .config .config-box .sign-box .sign {
+        margin-bottom: 20px;
+    }
+    .nav .user-terms .config .config-box .sign-box .sign:last-child {
+        margin-bottom: 0;
+    }
+    /***** Start Search Box *****/
+    .nav .user-terms .search .search-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+    .nav .user-terms .search .search-box .search-close {
+        top: 25%;
+    }
+    .nav .user-terms .search .search-box .search-bar {
+        width: calc(100% - 30%);
     }
     /***** Start Side Menu *****/
     .side-menu {
@@ -680,6 +731,14 @@
 /*********************  Medium Screens ********************/
 
 @media (min-width:992px)and (max-width:1199px) {
+    .header {
+        background-color: #fff;
+        z-index: 9999;
+        width: 100%;
+    }
+    .header .nav .user-terms {
+        z-index: 99999;
+    }
     .nav .user-terms .search .search-box {
         left: 120px;
     }
@@ -695,6 +754,11 @@
     .features .feature:hover {
         transform: translateY(-10px);
     }
+    .nav .user-terms .search .search-box {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .side-menu {
         display: none;
     }
@@ -704,6 +768,13 @@
 /*********************  Large Screens *********************/
 
 @media (min-width:1200px) {
+    .header {
+        background-color: #fff;
+        width: 100%;
+    }
+    .header .nav .user-terms {
+        z-index: 99999;
+    }
     .features .feature:hover {
         transform: translateY(-10px);
     }

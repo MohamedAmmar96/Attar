@@ -4,13 +4,8 @@
     .page-language {
         display: none;
     }
-    .nav .logo img {
-        margin-right: auto;
-        margin-left: auto;
-    }
     .nav .user-terms {
-        justify-content: center;
-        margin-top: 15px;
+        margin-top: 25px;
     }
     .nav .user-terms .menu-button,
     .nav .user-terms .config,
@@ -112,6 +107,23 @@
         margin-top: 30px;
         margin-bottom: 50px;
     }
+    .item {
+        flex-direction: column;
+    }
+    .item .customer-img {
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .item .content {
+        text-align: center;
+    }
+    .item .content .stars {
+        justify-content: center;
+    }
+    .list-unstyled {
+        padding-right: 0;
+    }
     .customers .customers-title {
         margin-bottom: 15px;
     }
@@ -185,11 +197,8 @@
     .footer .footer-top .two h3::after,
     .footer .footer-top .three h3::after,
     .footer .footer-top .four h3::after {
-        content: '\f0dd';
-        font-family: "Font Awesome 5 Free";
-        font-style: normal;
-        font-weight: 600;
-        text-decoration: inherit;
+        content: '\e874';
+        font-family: 'Linearicons-Free';
         position: absolute;
         right: 65px;
     }
@@ -551,11 +560,8 @@
     .footer .footer-top .two h3::after,
     .footer .footer-top .three h3::after,
     .footer .footer-top .four h3::after {
-        content: '\f0dd';
-        font-family: "Font Awesome 5 Free";
-        font-style: normal;
-        font-weight: 600;
-        text-decoration: inherit;
+        content: '\e874';
+        font-family: 'Linearicons-Free';
         position: absolute;
         right: 65px;
     }
@@ -731,6 +737,10 @@
 /*********************  Large Screens *********************/
 
 @media (min-width:1200px) {
+    .header {
+        background-color: #fff;
+        width: 100%;
+    }
     .features .feature:hover {
         transform: translateY(-10px);
     }
