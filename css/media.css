@@ -59,14 +59,31 @@
     .offers .offers-title {
         margin-bottom: 15px;
     }
+    .products-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product {
+        width: calc(100% - 50%);
+        margin-bottom: 30px;
+    }
+    .product:last-child {
+        margin-bottom: 15px;
+    }
+    .product .content-box {
+        margin-right: auto;
+        margin-left: auto;
+    }
     .product .content-box .content .content-name {
         height: 45px;
     }
     .product .content-box .add-to-cart {
         margin-bottom: 5px;
     }
-    .product {
-        width: 100%;
+    .product .img-box {
+        margin-bottom: 10px;
+        text-align: center;
     }
     .product .img-box:hover img {
         transform: translateY(0px);
@@ -224,12 +241,9 @@
     .nav .user-terms .config .config-box {
         right: -90px;
     }
-    .nav .user-terms .config .config-box .sign-box .sign:last-child {
-        margin-bottom: 0;
-    }
     /***** Start Search Box *****/
-    .nav .user-terms .search-bar {
-        width: 200px;
+    .nav .user-terms .search .box {
+        left: -50px;
     }
     /***** Start Side Menu *****/
     .side-menu {
@@ -351,6 +365,9 @@
     .main-slider .owl-carousel .owl-dots {
         bottom: 0px;
     }
+    .product {
+        width: calc(100% - 20%);
+    }
     .product .content-box .content .content-name {
         height: auto;
     }
@@ -376,8 +393,8 @@
         width: calc(100% - 30px);
     }
     /***** Start Search Box *****/
-    .nav .user-terms .search-bar {
-        width: 140px;
+    .nav .user-terms .search .box {
+        width: 250px;
     }
 }
 
@@ -441,14 +458,15 @@
     .offers .offers-title {
         margin-bottom: 15px;
     }
-    .product .content-box .content .content-name {
-        height: auto;
-    }
     .product {
-        width: 100%;
+        width: 33%;
+        margin-left: 2%;
+    }
+    .product .content-box .content .content-name {
+        height: 50px;
     }
     .product .img-box:hover img {
-        transform: translateY(0px);
+        transform: translateY(-5px);
     }
     .offers .owl-carousel .owl-dots {
         display: flex;
@@ -589,6 +607,10 @@
     .nav .user-terms .config .config-box {
         right: -90px;
     }
+    /***** Start Search Box *****/
+    .nav .user-terms .search .box {
+        left: -68px;
+    }
     /***** Start Side Menu *****/
     .side-menu {
         position: fixed;
@@ -706,9 +728,6 @@
         z-index: 9999;
         width: 100%;
     }
-    .nav .user-terms .search-bar {
-        width: 200px;
-    }
     .main-slider .owl-carousel .owl-dots {
         bottom: 20px;
     }
@@ -723,6 +742,10 @@
     }
     .side-menu {
         display: none;
+    }
+    /***** Start Search Box *****/
+    .nav .user-terms .search .box {
+        left: -100px;
     }
 }
 

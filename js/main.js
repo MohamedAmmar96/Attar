@@ -90,40 +90,23 @@ $(document).ready(function() {
 
     //This is to Open Search Box in small screens
     $(".user-terms .search .search-link").click(function() {
-        $("body").addClass("overflow")
         $(".overlay-box2").fadeIn(300);
     });
 
     $(".user-terms .search .search-link").click(function() {
         $(".search .search-link .search-icon").removeClass("open-search")
         $(".search .search-link .search-icon").addClass("close-search")
-        $(".config").hide();
-        $(".shopping").hide();
-        $(".search-name").hide();
-        if ($(window).width() <= 991) {
-            $(".menu-button").hide();
-        }
-        $(".search-icon").addClass("style");
-        $(".box").fadeIn(600);
+        $(".search .box").slideDown(300);
     });
 
-    $(".search-close,.overlay-box2").click(function() {
-        $("body").removeClass("overflow")
+    $(".overlay-box2").click(function() {
         $(".overlay-box2").fadeOut(300);
     });
 
-    $(".search-close,.overlay-box2").click(function() {
+    $(".overlay-box2").click(function() {
         $(".search .search-link .search-icon").addClass("open-search")
         $(".search .search-link .search-icon").removeClass("close-search")
-        $(".config").show();
-        $(".shopping").show();
-        $(".search-name").show();
-        if ($(window).width() <= 991) {
-            $(".menu-button").show();
-            $(".search-name").hide();
-        }
-        $(".search-icon").removeClass("style");
-        $(".box").fadeOut(300);
+        $(".search .box").slideUp(300);
     });
 
 
@@ -208,33 +191,33 @@ $(document).ready(function() {
     });
 
 
-    if ($(window).width() <= 991) {
-        $(".products-box").addClass("owl-carousel owl-theme");
-        $(".products-box .product").removeClass("owl-carousel");
-        $('.offers .owl-carousel').owlCarousel({
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            margin: 30,
-            rtl: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    loop: true
-                },
-                500: {
-                    items: 2,
-                    nav: false,
-                    loop: true
-                }
-            }
-        })
-    } else {
-        $(".products-box").removeClass("owl-carousel");
-        $(".products-box .product").removeClass("owl-carousel");
-    };
+    // if ($(window).width() <= 991) {
+    //     $(".products-box").addClass("owl-carousel owl-theme");
+    //     $(".products-box .product").removeClass("owl-carousel");
+    //     $('.offers .owl-carousel').owlCarousel({
+    //         loop: true,
+    //         autoplay: true,
+    //         autoplayTimeout: 4000,
+    //         margin: 30,
+    //         rtl: true,
+    //         responsiveClass: true,
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //                 nav: false,
+    //                 loop: true
+    //             },
+    //             500: {
+    //                 items: 2,
+    //                 nav: false,
+    //                 loop: true
+    //             }
+    //         }
+    //     })
+    // } else {
+    //     $(".products-box").removeClass("owl-carousel");
+    //     $(".products-box .product").removeClass("owl-carousel");
+    // };
 
 
     if ($(window).width() <= 991) {
